@@ -24,7 +24,11 @@ int main(int argc, char const *argv[])
 	}
 	
 	// Forcefully attaching socket to the port 8080
+#ifdef __APPLE__
+	if (setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR , &opt, sizeof(opt)))
+#else
 	if (setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT,&opt, sizeof(opt)))
+#endif
 	{
 		perror("setsockopt");
 		exit(EXIT_FAILURE);
