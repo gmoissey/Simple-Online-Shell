@@ -7,7 +7,8 @@ To run this program you will need to run these commands:
 -   `./socket_server` - first you need to spin up server. If you get `port already in use` error, then change port number defined in client and server code.
 -   `./socket_client` - run this in a different shell. **Server supports multipile clients** at a time so you can spin up other client instaces in other shells.
 
-**important:** due to limited functionality of this shell, please **run commands that will produce standard output.** Otherwise, online shell client will hang and you will have to restart.
+> [!IMPORTANT]
+> Due to limited functionality and pure demonstrational purposes of this shell, please **run commands that will produce standard output.** Otherwise, online shell client will hang and you will have to restart.
 
 To communicate with the server you just need to input unix command and the produced output on server will be sent and printed on client side.
 You can also view debug output in server shell.
